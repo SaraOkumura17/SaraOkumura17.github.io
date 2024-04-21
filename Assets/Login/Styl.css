@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/Assets/Images/Estrellas-1.gif");
+  }
+  
+  .Fomulario-crearcuenta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    text-align: center; /* Alineación del texto al centro */
+  }
+  
+  .Fomulario-crearcuenta h1 {
+    font-size: 2rem;
+    color: #d85fb0;
+    margin-bottom: 20px;
+  }
+  
+  #formulario-crear {
+    width: 100%;
+  }
+  
+  #formulario-crear label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  #formulario-crear input[type="email"],
+  #formulario-crear input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: solid 2px #9191bd;
+    border-radius: 20px;
+    outline: none;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #formulario-crear input[type="submit"] {
+    width: 100%;
+    background-color: #9191bd;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  }
+  
+  #formulario-crear input[type="submit"]:hover {
+    background-color: #79c5e2; /* Cambio de color al pasar el cursor */
+  }
+  
+  .Fomulario-crearcuenta a {
+    margin-top: 10px;
+    color: #555;
+    text-decoration: none;
+    border: 2px solid #9191bd; /* Borde del enlace */
+    border-radius: 20px; /* Borde redondeado */
+    padding: 10px 20px; /* Espaciado interno */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el cambio de color */
+  }
+  
+  .Fomulario-crearcuenta a:hover {
+    background-color: #9191bd; /* Cambio de color al pasar el cursor */
+    color: #fff; /* Cambio de color del texto al pasar el cursor */
+  }
+  
+  @media screen and (max-width: 580px) {
+    .Fomulario-crearcuenta {
+      border-radius: 0;
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  

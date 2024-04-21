@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*--------------VARIABLES GLOBALES--------------------*/
+:root{
+    --body-color: rgb(255, 179, 202);
+    --color-white: rgb(109, 61, 107);
+
+    --text-color-second: rgba(37, 0, 48, 0);
+    --text-color-third: rgb(245, 134, 195);
+
+    --first-color: rgba(255, 174, 195, 0.897);
+    --first-color-hover: rgb(255, 217, 244);
+
+    --second-color: skyblue;
+    --third-color: rgba(92, 192, 231, 0.904);
+    --first-shadow-color: black;
+}
+
+/*--------------BASE--------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Madimi', sans-serif;
+}
+body{
+    background-image: url("/Assets/Images/Estrellas-1.gif");
+    background-size: cover; /* para que la imagen se ajuste al tamaño del contenedor */
+    /* Otros estilos opcionales */
+    background-repeat: no-repeat; /* para evitar que la imagen se repita */
+    background-position: center; /* para centrar la imagen */
+.container{
+    width: 100%;
+    position: relative;
+}
+}
+/*----------------------------- GLOBAL BUTTON DESIGN ------------------------------------------*/
+.btn{
+    font-weight: 500;
+    padding: 12px 20px;
+    background: rgba(255, 191, 241, 0.918);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn>i{
+    margin-left: 16px;
+}
+.btn:hover{
+    background: var(--second-color);
+    color: var(--color-white);
+}
+/*----------------------------- GLOBAL ICONS DESIGN ------------------------------------------*/
+i{
+    font-size: 16px;
+}
+.BtnHamburger{
+    font-size: 58px;
+}
+/*----------------------------- NAVIGATION BAR ------------------------------------------*/
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: rgb(173, 59, 97);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+}
+.nav-logo{
+    position: relative;
+}
+.nav-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span{
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: black;
+}
+.nav-menu, .nav_menu_list{
+    display: flex;
+}
+.nav-name, .nav_list{
+    list-style: none;
+    position: relative;
+}
+.nav-link{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.863);
+    font-weight: 600;
+    padding-inline: 15px;
+    margin-inline: 20px;
+}
+.nav-menu-btn{
+    display: none;
+}
+.nav-menu-btn{
+    font-size: 28px;
+    cursor: pointer;
+}
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3s;
+}
+.active-link::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%,-50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+/*----------------------------- WRAPPER DESING ------------------------------------------*/
+.wrapper{
+    height: 150vh;
+}
+/*----------------------------- FEATURED BOX ------------------------------------------*/
+.featured-box{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    min-height: 700px;
+}
+/*----------------------------- FEATURED TEXT BOX ------------------------------------------*/
+.featured-text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+.featured-text, p{
+    color: white;
+}
+.featured-text-card span{
+    background: var(--third-color);
+    color: var(--color-white);
+    padding: 3px 8px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.featured-name{
+    font-size: 50px;
+    font-weight: 600;
+    margin-block: 20px;
+}
+.typedText{
+    text-transform: capitalize;
+    color: var(--text-color-third);
+}
+.featured-text-info{
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: var(--color-white);
+}
+.featured-text-btn{
+    display: flex;
+    gap: 30px;
+}
+.featured-text-btn>.blue-btn{
+    background: var(--first-color);
+    color: var(--color-white);
+}
+.featured-text-btn>.blue-btn:hover{
+    background: var(--first-color-hover);
+}
+/*----------------------------- FEATURED IMAGE BOX ------------------------------------------*/
+.featured-image{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 120vh;
+    width: 80%;
+}
+.image{
+    margin: auto 0;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 100% 100% 100% 100%;
+    overflow: hidden;
+
+}
+  
+.image img{
+    width: 900px;
+    height: 900px;
+    object-fit: cover;
+}
+
+/*----------------------------- MAIN BOX ------------------------------------------*/
+.section{
+    padding-block: 10em;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.col{
+    display: flex;
+    width: 50%;
+}
+/*----------------------------- REUSABLE CSS ------------------------------------------*/
+.top-header{
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1{
+    font-weight: 600;
+    color: rgb(255, 218, 246);
+    margin-bottom: 10px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 218, 246);
+    margin-bottom: 15px;
+}
+/*----------------------------- ABOUT INFO ------------------------------------------*/
+.about-info p {
+    color: rgb(255, 218, 246);
+}
+.about-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: rgba(134, 87, 153, 0.568);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+}
+.about-info p {
+    text-align: center;
+    font-size: 15px;
+    color: #edd1ff;
+}
+
+.about-info button{
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    background-color: var(--first-color);
+    color: var(--color-white);
+    border-radius: 30px;
+}
+.about-btn:hover{
+    color: var(--first-color-hover);
+}
+/*----------------------------- ABOUT INFO / SKILLS BOX ------------------------------------------*/
+.skills-box{
+    margin: 15px;
+}
+.Skill-heade{
+    margin-bottom: 25px;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5px;
+}
+.skills-list span{
+    font-size: 16px;
+    background: var(--first-color);
+    color: var(--color-white);
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 3px;
+}
+/*----------------------------- SECTION PROJECTS ------------------------------------------*/
+.project-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.project-box>i{
+    font-size: 50px;
+    color: var(--second-color);
+    margin-bottom: 25px;
+
+}
+.project-box label{
+    font-size: 16px;
+    color:rgba(115, 195, 233, 0.918);
+}
+.project-box::after{
+    content: " ";
+    position: absolute;
+    bottom: -100%;
+    background: rgba(115, 195, 233, 0.918);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    z-index: 1;
+}
+.project-box:hover.project-box::after{
+    bottom: 0;
+}
+.project-box:hover.project-box i ,
+.project-box:hover.project-box>h3,
+.project-box:hover.project-box>label{
+    color: var(--color-white);
+    z-index: 2;
+}
+/*----------------------------------CONTACT BOX------------------------------------------*/
+.contact-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: 315px;
+    background: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.contact-info>h2{
+    color: rgba(255, 174, 195, 0.897);
+    margin-bottom: 30px;
+}
+.contact-info p{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: rgba(255, 174, 195, 0.897);
+    margin-block: 15px;
+}
+.contact-info p>i{
+    font-size: 18px;
+}
+
+/*----------------------------------CONTACT FORM------------------------------------------*/
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.form-inpud{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.input-field{
+    width: 50%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 15px;
+    padding: 20px;
+    outline: none;
+}
+textarea{
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 15px;
+    padding: 15px 20px;
+    outline: none;
+    resize: none;
+}
+.form-button>.btn{
+    display: flex;
+    align-items: center;
+    background: var(--second-color);
+    color: var(--color-white);
+}
+.about-btn>.btn:hover{
+    background: #00b5e7;
+}
+.form-button i{
+    font-size: 18px;
+    rotate: -45deg;
+}
+
+      /*----------------------------- Redes Sociales ------------------------------------------*/
+      .buttons {
+        min-width: 1000px;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #a560acf5;
+      }
+      
+      .buttons a {
+        text-decoration: none;
+        font-size: 28px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background: #cf4c99e5;
+        color: #ffdada;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+        transition: all .4s ease-in-out;
+      }
+      
+      .buttons a:hover {
+        transform: scale(1.2);
+      }
